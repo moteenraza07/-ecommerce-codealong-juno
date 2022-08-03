@@ -35,4 +35,15 @@ a {
 			color: $solidWhite;
 		}
 	}
+
+	&.secondaryButton {
+		background-color: $primary;
+		color: $solidWhite;
+
+		&:hover,
+		&:focus {
+			background-color: $solidWhite;
+			color: $primary;
+		}
+	}
 }
