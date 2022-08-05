@@ -39,7 +39,7 @@
 	}
 }
 
-// TODO implement slide out functionality in JS
+/* TODO implement slide out functionality in JS */
 .slideOutNav {
 	background-color: $primary;
 	color: $solidWhite;
@@ -54,6 +54,11 @@
 	flex-direction: column;
 	z-index: 20;
 	left: -450px;
+	transition: 0.3s;
+
+	&.open {
+		left: 0;
+	}
 
 	button {
 		align-self: flex-end;

@@ -462,6 +462,7 @@ a.secondaryButton:hover, a.secondaryButton:focus {
   margin-left: 50px;
 }
 
+/* TODO implement slide out functionality in JS */
 .slideOutNav {
   background-color: #084b6d;
   color: #fff;
@@ -481,6 +482,11 @@ a.secondaryButton:hover, a.secondaryButton:focus {
           flex-direction: column;
   z-index: 20;
   left: -450px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.slideOutNav.open {
+  left: 0;
 }
 .slideOutNav button {
   -ms-flex-item-align: end;
@@ -636,9 +642,7 @@ footer a:hover, footer a:focus {
     margin-bottom: 60px;
   }
   footer .footerNav {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    width: 100%;
+    width: 85%;
   }
 }
 @media (max-width: 500px) {
@@ -662,6 +666,11 @@ footer a:hover, footer a:focus {
   .categoryGallery .item {
     width: 100%;
   }
+  .slideOutNav {
+    font-family: #084b6d;
+    font-size: 30px;
+    font-size: 1.5rem;
+  }
   .play {
     padding: 0;
   }
@@ -669,7 +678,7 @@ footer a:hover, footer a:focus {
     font-size: 40px;
     font-size: 2rem;
   }
-  .footerFlexContainer {
+  footer .footerFlexContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -678,10 +687,10 @@ footer a:hover, footer a:focus {
         -ms-flex-align: center;
             align-items: center;
   }
-  .footerFlexContainer h4 {
+  footer .footerFlexContainer h4 {
     margin-bottom: 50px;
   }
-  .footerNav {
+  footer .footerNav {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -691,9 +700,9 @@ footer a:hover, footer a:focus {
             align-items: center;
     text-align: center;
   }
-  .footerShop,
-.footerAbout,
-.footerTemp {
+  footer .footerShop,
+footer .footerAbout,
+footer .footerTemp {
     margin-bottom: 30px;
   }
 }
